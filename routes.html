@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routes - CarConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">CarConnect</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="routes.html" class="active">Routes</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="routes-header">
+            <div class="header-content">
+                <h1>Discover Routes</h1>
+                <p class="subtitle">AI-powered scenic drives tailored to your location</p>
+            </div>
+            <button class="btn-primary">+ Generate New Route</button>
+        </section>
+
+        <div class="route-generator card">
+            <h3>🤖 AI Route Generator</h3>
+            <p class="text-secondary">Tell us what you're looking for and we'll create the perfect drive</p>
+            
+            <div class="generator-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Starting Location</label>
+                        <input type="text" placeholder="Enter your location" value="New York City, NY">
+                    </div>
+                    <div class="form-group">
+                        <label>Distance</label>
+                        <select>
+                            <option>Short (< 50 mi)</option>
+                            <option selected>Medium (50-100 mi)</option>
+                            <option>Long (100+ mi)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Route Type</label>
+                        <select>
+                            <option>Scenic Coastal</option>
+                            <option selected>Mountain/Canyon</option>
+                            <option>Highway Cruise</option>
+                            <option>Urban Explorer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Difficulty</label>
+                        <select>
+                            <option>Easy (Relaxed)</option>
+                            <option selected>Medium (Some Curves)</option>
+                            <option>Hard (Technical)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn-primary generate-btn">Generate Route with AI</button>
+            </div>
+        </div>
+
+        <div class="routes-layout">
+            <!-- Map Section -->
+            <div class="map-container card">
+                <div class="map-header">
+                    <h3>Live Route Map</h3>
+                    <div class="map-controls">
+                        <span class="badge live">5 Drivers Active</span>
+                        <button class="btn-secondary small">Share Location</button>
+                    </div>
+                </div>
+                
+                <div class="map-placeholder">
+                    <!-- Simulated Dark Map -->
+                    <div class="map-overlay">
+                        <div class="route-line"></div>
+                        <div class="driver-marker marker-1">
+                            <span class="pulse"></span>
+                            <span class="marker-label">You</span>
+                        </div>
+                        <div class="driver-marker marker-2">
+                            <span class="pulse"></span>
+                            <span class="marker-label">@m3_josh</span>
+                        </div>
+                        <div class="driver-marker marker-3">
+                            <span class="pulse"></span>
+                            <span class="marker-label">@evo_sarah</span>
+                        </div>
+                        <div class="location-pin start-pin">START</div>
+                        <div class="location-pin end-pin">END</div>
+                    </div>
+                    <div class="map-info">
+                        <p>🗺️ Interactive Map View</p>
+                        <p class="text-secondary">Drivers sharing location appear as live markers</p>
+                    </div>
+                </div>
+
+                <div class="route-stats-bar">
+                    <div class="stat">
+                        <span class="stat-number">87.3</span>
+                        <span class="stat-label">Miles</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2h 15m</span>
+                        <span class="stat-label">Est. Time</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">★ 4.8</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Hard</span>
+                        <span class="stat-label">Difficulty</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="routes-sidebar">
+                <!-- Active Routes -->
+                <div class="card">
+                    <h3>Active Routes Now</h3>
+                    <div class="divider"></div>
+
+                    <div class="route-card active-route">
+                        <div class="route-header">
+                            <h4>Bear Mountain Loop</h4>
+                            <span class="badge live">Live</span>
+                        </div>
+                        <p class="route-description">Challenging mountain roads with stunning views of the Hudson Valley</p>
+                        <div class="route-meta">
+                            <span>📍 87.3 mi</span>
+                            <span>⏱️ 2h 15m</span>
+                            <span>👥 5 active</span>
+                        </div>
+                        <button class="btn-primary small mt-20">Join Route</button>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h4>Coastal Highway Run</h4>
+                            <span class="badge live">Live</span>
+                        </div>
+                        <p class="route-description">Smooth ocean-side drive perfect for a sunset cruise</p>
+                        <div class="route-meta">
+                            <span>📍 124 mi</span>
+                            <span>⏱️ 3h</span>
+                            <span>👥 12 active</span>
+                        </div>
+                        <button class="btn-secondary small mt-20">View Details</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Your Saved Routes</h3>
+                    <div class="divider"></div>
+
+                    <div class="saved-route-item">
+                        <div class="saved-route-info">
+                            <p class="route-name">Taconic State Parkway</p>
+                            <p class="route-stats">45 mi • Easy</p>
+                        </div>
+                        <div class="route-actions">
+                            <button class="icon-btn">▶️</button>
+                            <button class="icon-btn">⭐</button>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="saved-route-item">
+                        <div class="saved-route-info">
+                            <p class="route-name">Palisades Interstate</p>
+                            <p class="route-stats">32 mi • Medium</p>
+                        </div>
+                        <div class="route-actions">
+                            <button class="icon-btn">▶️</button>
+                            <button class="icon-btn">⭐</button>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="saved-route-item">
+                        <div class="saved-route-info">
+                            <p class="route-name">Catskill Mountain Route</p>
+                            <p class="route-stats">156 mi • Hard</p>
+                        </div>
+                        <div class="route-actions">
+                            <button class="icon-btn">▶️</button>
+                            <button class="icon-btn">⭐</button>
+                        </div>
+                    </div>
+
+                    <a href="#" class="view-all-link">View all saved (12) →</a>
+                </div>
+
+                <div class="card">
+                    <h3>🔥 Popular This Week</h3>
+                    <div class="divider"></div>
+
+                    <div class="popular-route">
+                        <span class="rank">#1</span>
+                        <div class="popular-route-info">
+                            <p class="route-name">Angeles Crest Highway</p>
+                            <p class="route-stats">89 completions</p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="popular-route">
+                        <span class="rank">#2</span>
+                        <div class="popular-route-info">
+                            <p class="route-name">Pacific Coast Highway</p>
+                            <p class="route-stats">76 completions</p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="popular-route">
+                        <span class="rank">#3</span>
+                        <div class="popular-route-info">
+                            <p class="route-name">Tail of the Dragon</p>
+                            <p class="route-stats">64 completions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
