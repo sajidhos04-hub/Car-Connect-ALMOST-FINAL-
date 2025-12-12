@@ -355,32 +355,6 @@ main {
     padding-bottom: 0;
 }
 
-.activity-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.user-info {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-.user-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.username {
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 2px;
-}
-
 .timestamp {
     font-size: 14px;
     color: var(--text-secondary);
